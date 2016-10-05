@@ -133,7 +133,7 @@ public class ArticleDetailFragment extends Fragment implements
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
-                        .setText("Some sample text")
+                        .setText(getString(R.string.text_have_a_look) + mCursor.getString(ArticleLoader.Query.TITLE))
                         .getIntent(), getString(R.string.action_share)));
             }
         });
